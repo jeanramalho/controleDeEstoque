@@ -10,6 +10,14 @@ public class Produto {
         this.nome = nome;
         this.categoria = categoria;
         this.preco = preco;
-        this.quantidade = quantidade;
+        setQuantidade(quantidade);
+    }
+
+    public void setQuantidade(int quantidade) {
+        if (quantidade < 0) {
+            this.quantidade = 0;
+        } else {
+            this.quantidade = quantidade;
+        }
     }
 }
